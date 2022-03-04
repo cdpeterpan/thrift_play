@@ -1,0 +1,31 @@
+Ref: https://zhuanlan.zhihu.com/p/419724200
+1.install: https://thrift.apache.org/docs/install/
+2.Thrift Installing and Compiling
+OS:Ubuntu 20
+
+Thrift Package:thrift-0.16.0.tar.gz
+
+URL:https://thrift.apache.org/download
+
+Step:
+
+① Required packages
+
+sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
+
+② tar -xvf thrift-0.7.0.tar.gz
+
+③ cd thrift-0.7.0
+
+④ ./configure
+
+⑤ sudo make 
+
+⑥ sudo make install
+
+3.cd project_dir
+4.edit Serv.thrift
+5.thrift -r gen cpp Serv.thrift
+6.cd gen-cpp, edit Serv_server.skeleton.cpp, write your code in funtion
+7.cd ..
+8.edit client.cpp, call function of Serv
